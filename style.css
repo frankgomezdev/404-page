@@ -12,10 +12,10 @@ body {
 }
 
 header {
-    width: 100px;
+    width: 100%;
     padding: 40px 77px 0px 77px;
     font-family: "Inconsolata", monospace;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 1.5em;
     letter-spacing: -0.08em;
     text-transform: uppercase;
@@ -26,6 +26,33 @@ main {
     padding: 77px 77px;
     width: 100%;
 }
+
+button {
+    font-weight: 700;
+    padding: 24px 43px;
+    background-color: #333333;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: min(70%, 325px);
+    text-align: center;
+    font-size: .88em;
+}
+
+footer {
+    padding: 40px 77px 24px 77px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .88em;
+    color: #BDBDBD;
+    font-weight: 500;
+}
+
+footer span span {
+    font-weight: 700;
+    text-decoration: underline;
+  }
 
 
 .main-content {
@@ -42,7 +69,16 @@ main {
     justify-content: center;
     position: relative;
     align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(Scarecrow.png);
 }
+
+.main-img img {
+    display: none;
+    width: 100%;
+  }
 
 .main-text {
     font-family: "Space Mono", monospace;
@@ -53,4 +89,78 @@ main {
     letter-spacing: -0.035em;
 }
 
+.main-text h1 {
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 1.4em;
+    color: #333333;
+    max-width: 733px;
+}
 
+.main-text p {
+    font-size: 1.5em;
+    width: min(100%, 500px);
+    line-height: 1.5em;
+    color: #4F4F4F;
+}
+
+@media screen and (max-width: 1100px) {
+    .main-text h1 {
+      font-size: 3em;
+      line-height: 1.3em;
+    }
+  
+    .main-text p {
+      font-size: 1.125em;
+      line-height: 1.3em;
+    }
+  
+    .main-text a {
+      font-size: .66em;
+    }
+  
+    footer {
+      font-size: .66em;
+    }
+  
+    .main-text {
+      row-gap: 38px;
+    }
+  
+    .main-text p {
+      width: 100%;
+    }
+  }
+
+
+@media screen and (max-width: 900px) {
+    .main-content {
+      flex-wrap: wrap;
+    }
+  
+    .main-img img {
+      display: block;
+    }
+  
+    .main-img {
+      background: none;
+    }
+  
+    .main-text {
+      padding: 0;
+    }
+  
+    .main-content {
+      row-gap: 40px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    header {
+      padding: 20px 24px;
+    }
+  
+    main {
+      padding: 40px 24px 80px 24px;
+    }
+  }
